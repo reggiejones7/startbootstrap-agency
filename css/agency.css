@@ -865,3 +865,8 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
+
+.img-responsive {
+	border-style: solid;
+	border-width: 2px;
+}
