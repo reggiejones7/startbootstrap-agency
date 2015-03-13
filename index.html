@@ -154,7 +154,7 @@
                     <ul class="timeline">
                         <li>
 							<a href="#portfolioModal6" data-toggle="modal">
-	                            <div class="timeline-image">
+	                            <div class="timeline-image" id="guy">
 	                                <img class="img-circle img-responsive" src="img/icons/creepy-guy.png" alt="">
 	                            </div>
 							</a>
@@ -169,8 +169,8 @@
                         </li>
                         <li class="timeline-inverted">
 							<a href="#portfolioModal7" data-toggle="modal">
-	                            <div class="timeline-image">
-	                                <img class="img-circle img-responsive" src="img/icons/Paper-Plane.png" alt="">
+	                            <div class="timeline-image" >
+	                                <img class="img-circle img-responsive" id="plane" src="img/icons/Paper-Plane.png" alt="">
 	                            </div>
 	                        </a>
                             <div class="timeline-panel">
@@ -495,7 +495,7 @@
             </div>
         </div>
     </div>
-	
+
     <!-- Portfolio Modal 6 -->
 	<div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -521,7 +521,7 @@
             </div>
         </div>
     </div>
-	
+
 	<!-- Portfolio Modal 6: contextual inqueries -->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -631,6 +631,17 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
+
+	<script>
+		$('.timeline-image').children().each(function() {
+			$(this).hover(function() {
+							//$(this).width($(this).width() + 10);
+							$(this).height($(this).height() + 10);})
+			$(this).mouseout(function() {
+							$(this).height($(this).height() - 21);
+								console.log("works")})
+		})
+	</script>
 
 </body>
 
